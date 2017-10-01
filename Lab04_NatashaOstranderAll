@@ -1,0 +1,176 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Lab04_NatashaOstrander
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // #4 for loop using i as a counter
+                        int i; //counter
+                        for (i = 1; i <= 100; i++)
+                        {
+                            if ((i % 2) == 0)
+                            {
+                                Console.WriteLine(" i is even: " + i);
+                            }
+                            else
+                            {
+                                Console.WriteLine(" i is odd: " + i);
+                            }
+                        } //End of for loop
+            
+
+            // #5 Output an animal based on the temperature given by a user
+                        Console.WriteLine("Please Enter a Temperature: ");
+                        int temperature = Convert.ToInt16(Console.ReadLine());
+
+                        if(temperature<10)
+                        {
+                            Console.WriteLine("Polar Bear");
+                        }
+                        else if (temperature<20)
+                        {
+                            Console.WriteLine("Penguin");
+                        }
+                        else if (temperature < 40)
+                        {
+                            Console.WriteLine("Moose");
+                        }
+                        else if (temperature < 50)
+                        {
+                            Console.WriteLine("Reindeer");
+                        }
+                        else if (temperature < 60)
+                        {
+                            Console.WriteLine("Deer");
+                        }
+                        else if (temperature < 70)
+                        {
+                            Console.WriteLine("Turtle");
+                        }
+                        else if (temperature < 80)
+                        {
+                            Console.WriteLine("Lion");
+                        }
+                        else if (temperature < 90) 
+                        {
+                                Console.WriteLine("Fish");
+                        }
+                        else 
+                        {
+                                Console.WriteLine("Bug");
+                        }
+                        
+            // #6 Output an animal based on the exhibit number given
+                        Console.WriteLine("Please Enter an Exhibit Number or 0 to exit: ");
+                        int input = Convert.ToInt16(Console.ReadLine()); 
+                        while (input != 0)// Continual loop until a 0 is entered
+                        {
+                            switch (input)
+                            {
+                                case 1:
+                                    Console.WriteLine("Polar Bear");
+                                    break;
+                                case 2:
+                                    Console.WriteLine("Penguin");
+                                    break;
+                                case 3:
+                                    Console.WriteLine("Moose");
+                                    break;
+                                case 4:
+                                    Console.WriteLine("Reindeer");
+                                    break;
+                                case 5:
+                                    Console.WriteLine("Deer");
+                                    break;
+                                case 6:
+                                    Console.WriteLine("Turtle");
+                                    break;
+                                case 7:
+                                    Console.WriteLine("Lion");
+                                    break;
+                                case 8:
+                                    Console.WriteLine("Fish");
+                                    break;
+                                case 9:
+                                    Console.WriteLine("Bug");
+                                    break;
+                            }
+                            Console.WriteLine("Please Enter an Exhibit Number: ");
+                            input = Convert.ToInt16(Console.ReadLine()); 
+                        }
+            // #7 Displays patterns
+            // a
+                        int i = 1; // row counter
+                        int x = 1; // asterisk counter
+                        for (i=1;i<=10;i++)
+                        {
+                            for (x=1;x<=i;x++)
+                            {
+                                Console.Write('*');
+                            }
+                            Console.WriteLine();
+                        }
+            // b
+                        int i = 1; // row counter
+                        int x = 10; // asterisk counter
+                        for (i = 1; i <= 10; i++)
+                        {
+                            for (x = 10; x >= i; x--)
+                            {
+                                Console.Write('*');
+                            }
+                            Console.WriteLine();
+                        }
+            
+
+            // c
+                        int i = 1; // row counter
+                        int x = 10; // asterisk counter
+                        int r = 0; // space counter
+
+                        for (i = 10; i >= 1; --i)
+                        { 
+                            for (r = 0; r < 10 - i; ++r)
+                            {
+                                Console.Write(' ');
+                            }
+
+
+                             for (x = i; x <= 2 * i - 1; ++x)
+                            {
+                                Console.Write('*');
+                            }
+
+                            Console.WriteLine();
+
+                        }
+            
+            // d
+                        int i; // row counter
+                        int x; // asterisk counter
+                        int r; // space counter
+
+                        for (i = 10; i >= 1; --i)
+                        {
+                            for (r =i; r>0; --r)
+                            {
+                                Console.Write(' ');
+                            }
+
+                            for (x = 1; x <= 10-i ; ++x)
+                            {
+                                Console.Write('*');
+                            }
+
+                            Console.WriteLine();
+
+                        }
+            
+        } // end of Main program
+    }
+}
